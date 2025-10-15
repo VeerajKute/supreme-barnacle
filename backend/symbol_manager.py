@@ -6,13 +6,16 @@ Automatically discovers and manages stock symbols without manual updates
 import asyncio
 import json
 import logging
+import os
 import time
 from typing import Dict, List, Optional, Set
 from datetime import datetime, timedelta
 import aiohttp
 import sqlite3
 from pathlib import Path
+from dotenv import load_dotenv
 
+load_dotenv()
 logger = logging.getLogger(__name__)
 
 class SymbolManager:
